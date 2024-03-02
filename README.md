@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,13 +34,37 @@
 </head>
 <body>
     <!-- A porta lógica OR -->
-    <div class="or-gate" onclick="toggleGate(this)">
+    <div class="or-gate" onclick="toggleGate()">
         <div class="or-text">OR</div>
     </div>
 
     <script>
-        // Função para alternar entre os estados ativo e inativo da porta
-        function toggleGate(element) {
+        // Valores iniciais da tabela verdade
+        let inputA = false;
+        let inputB = false;
+
+        // Função para alternar os valores da tabela verdade
+        function toggleGate() {
+            inputA = !inputA;
+            inputB = !inputB;
+
+            // Atualiza a cor de fundo da porta com base nos novos valores
+            updateGateColor();
+
+            // Mostra os valores atuais no console (pode ser removido em uma versão final)
+            console.log(`Input A: ${inputA}, Input B: ${inputB}`);
+        }
+
+        // Função para atualizar a cor de fundo da porta com base nos valores da tabela verdade
+        function updateGateColor() {
+            const gate = document.querySelector('.or-gate');
+            const isActive = inputA || inputB;
+            gate.classList.toggle('active', isActive);
+        }
+    </script>
+</body>
+</html>
+
             element.classList.toggle('active');
         }
     </script>
