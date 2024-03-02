@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +17,7 @@
         }
 
         /* Texto dentro da porta lógica */
-        .or-text {
+        .logicgateor-text {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -64,10 +63,3 @@
     </script>
 </body>
 </html>
-
-            element.classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
-
